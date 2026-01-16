@@ -216,9 +216,9 @@ export default function Hero() {
 
                 {/* Subheadline */}
                 <p className="text-lg md:text-xl text-[var(--color-text-secondary)] max-w-2xl mx-auto mb-10">
-                    A collection of <span className="text-[#22c55e]">35+ Skills</span>,{" "}
-                    <span className="text-[#3b82f6]">Rules</span>, and{" "}
-                    <span className="text-[#f97316]">UI Style</span> to transform
+                    A collection of <span className="text-[#22c55e]">41 Skills</span>,{" "}
+                    <span className="text-[#3b82f6]">16 Agents</span>, and{" "}
+                    <span className="text-[#f97316]">11 Workflows</span> to transform
                     your AI agent into a domain expert.
                 </p>
 

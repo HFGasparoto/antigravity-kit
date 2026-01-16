@@ -9,11 +9,11 @@ const skillCategories = [
         name: "Frontend",
         color: "#c084fc",
         skills: [
-            "react-expert",
-            "nextjs-expert",
+            "react-patterns",
+            "nextjs-best-practices",
             "vue-expert",
-            "css-styling-expert",
-            "state-management-expert",
+            "frontend-design",
+            "tailwind-patterns",
             "ui-ux-pro-max",
         ],
     },
@@ -22,10 +22,10 @@ const skillCategories = [
         name: "Backend",
         color: "#22c55e",
         skills: [
-            "nodejs-expert",
+            "api-patterns",
             "nestjs-expert",
-            "rest-api-expert",
-            "auth-expert",
+            "nodejs-best-practices",
+            "python-patterns",
         ],
     },
     {
@@ -33,10 +33,8 @@ const skillCategories = [
         name: "Database",
         color: "#3b82f6",
         skills: [
+            "database-design",
             "prisma-expert",
-            "postgres-expert",
-            "mongodb-expert",
-            "database-expert",
         ],
     },
     {
@@ -44,10 +42,12 @@ const skillCategories = [
         name: "Testing",
         color: "#f97316",
         skills: [
-            "testing-expert",
-            "jest-testing-expert",
-            "vitest-testing-expert",
-            "playwright-expert",
+            "testing-patterns",
+            "webapp-testing",
+            "tdd-workflow",
+            "code-review-checklist",
+            "lint-and-validate",
+            "typescript-expert",
         ],
     },
     {
@@ -55,21 +55,45 @@ const skillCategories = [
         name: "DevOps",
         color: "#22d3ee",
         skills: [
-            "devops-expert",
+            "deployment-procedures",
             "docker-expert",
-            "github-actions-expert",
-            "git-expert",
+            "server-management",
+            "bash-linux",
+            "powershell-windows",
         ],
     },
     {
-        id: "quality",
-        name: "Quality",
+        id: "security",
+        name: "Security",
+        color: "#ef4444",
+        skills: [
+            "vulnerability-scanner",
+            "red-team-tactics",
+        ],
+    },
+    {
+        id: "architecture",
+        name: "Architecture",
+        color: "#8b5cf6",
+        skills: [
+            "app-builder",
+            "architecture",
+            "plan-writing",
+            "brainstorming",
+            "clean-code",
+        ],
+    },
+    {
+        id: "specialized",
+        name: "Specialized",
         color: "#eab308",
         skills: [
-            "code-review",
-            "refactoring-expert",
-            "typescript-expert",
-            "accessibility-expert",
+            "mobile-design",
+            "game-development",
+            "performance-profiling",
+            "seo-fundamentals",
+            "i18n-localization",
+            "mcp-builder",
         ],
     },
 ];
@@ -85,7 +109,7 @@ export default function Skills() {
                 <div className="text-center mb-12">
                     <p className="text-[#c084fc] font-mono text-sm mb-3">// SKILLS</p>
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                        <span className="text-[#22c55e]">35+</span> Domain Expert Skills
+                        <span className="text-[#22c55e]">41+</span> Domain Expert Skills
                     </h2>
                     <p className="text-[var(--color-text-secondary)] max-w-xl mx-auto">
                         The agent automatically identifies and applies the right skill for each task.
@@ -99,8 +123,8 @@ export default function Skills() {
                             key={cat.id}
                             onClick={() => setActiveCategory(cat.id)}
                             className={`px-4 py-2 rounded-lg text-sm font-mono transition-all cursor-pointer ${activeCategory === cat.id
-                                    ? "bg-[var(--color-bg-elevated)] border-2"
-                                    : "bg-transparent border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:border-[var(--color-border-hover)]"
+                                ? "bg-[var(--color-bg-elevated)] border-2"
+                                : "bg-transparent border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:border-[var(--color-border-hover)]"
                                 }`}
                             style={{
                                 borderColor: activeCategory === cat.id ? cat.color : undefined,
@@ -140,7 +164,7 @@ export default function Skills() {
                         <div className="flex items-center gap-3 py-1.5 mt-2">
                             <span className="text-[#64748b] w-4" />
                             <span className="text-[#64748b] text-xs">
-                                + {35 - (currentCategory?.skills.length || 0)} more skills...
+                                + {41 - (currentCategory?.skills.length || 0)} more skills...
                             </span>
                         </div>
                     </div>

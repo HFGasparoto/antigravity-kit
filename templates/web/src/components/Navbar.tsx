@@ -48,7 +48,7 @@ export default function Navbar() {
                     <div className="flex items-center gap-2">
                         {/* Donate link */}
                         <a
-                            href="https://buymeacoffee.com/vudovn"
+                            href="https://img.vietqr.io/image/mbbank-0779440918-compact2.jpg"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded-md bg-gradient-to-r from-pink-500 to-red-500 text-white hover:from-pink-600 hover:to-red-600 transition-all cursor-pointer shadow-lg shadow-pink-500/20"

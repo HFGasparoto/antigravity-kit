@@ -2,9 +2,9 @@
 
 > **AI Agent Capability Expansion Toolkit** - A comprehensive collection of skills, rules, and workflows to supercharge AI coding assistants.
 
-[![Skills](https://img.shields.io/badge/Skills-35+-blue)](#-skills)
-[![Rules](https://img.shields.io/badge/Rules-10-green)](#-rules)
-[![Workflows](https://img.shields.io/badge/Workflows-2-orange)](#-workflows)
+[![Skills](https://img.shields.io/badge/Skills-41-blue)](#-skills-41)
+[![Agents](https://img.shields.io/badge/Agents-16-green)](#-agents-16)
+[![Workflows](https://img.shields.io/badge/Workflows-11-orange)](#-workflows-11)
 
 ---
 
@@ -37,100 +37,135 @@ Designed to integrate with AI agents supporting the **Agent Skills** standard.
 
 ---
 
-## 🧠 Skills
+## 🧠 Skills (41)
 
 Skills are domain-specific expertise modules. The agent automatically identifies and uses the appropriate skill for each task.
 
-### Frontend
+### Frontend & UI
 
 | Skill | Description |
 |-------|-------------|
-| `react-expert` | React 18/19, hooks, patterns, performance |
-| `nextjs-expert` | App Router, Server Components, SSR |
-| `css-expert` | CSS architecture, responsive, design systems |
-| `state-management-expert` | Redux, Zustand, React Query |
-| `ui-ux-pro-max` | 50 styles, 21 palettes, 50 font pairings |
+| `react-patterns` | React hooks, state, performance |
+| `nextjs-best-practices` | App Router, Server Components |
+| `vue-expert` | Vue 3, Composition API, Pinia |
+| `frontend-design` | UI/UX patterns, design systems |
+| `tailwind-patterns` | Tailwind CSS utilities |
+| `ui-ux-pro-max` | 50 styles, 21 palettes, 50 fonts |
 
-### Backend
+### Backend & API
 
 | Skill | Description |
 |-------|-------------|
-| `nodejs-expert` | Async patterns, modules, performance |
-| `nestjs-expert` | Module architecture, DI, testing |
-| `rest-api-expert` | RESTful design, HTTP semantics |
-| `auth-expert` | JWT, OAuth 2.0, RBAC, security |
+| `api-patterns` | REST, GraphQL, HTTP semantics |
+| `nestjs-expert` | NestJS modules, DI, decorators |
+| `nodejs-best-practices` | Node.js async, modules |
+| `python-patterns` | Python standards, FastAPI |
 
 ### Database
 
 | Skill | Description |
 |-------|-------------|
-| `prisma-expert` | Schema design, migrations, queries |
-| `database-expert` | General database optimization |
-| `postgres-expert` | PostgreSQL-specific patterns |
-| `mongodb-expert` | MongoDB document modeling |
+| `database-design` | Schema design, optimization |
+| `prisma-expert` | Prisma ORM, migrations |
 
-### Testing
+### Testing & Quality
 
 | Skill | Description |
 |-------|-------------|
-| `testing-expert` | General testing strategies |
-| `jest-expert` | Jest framework, mocking |
-| `vitest-expert` | Vitest, Vite integration |
-| `playwright-expert` | E2E testing, browser automation |
+| `testing-patterns` | Jest, Vitest, test strategies |
+| `webapp-testing` | E2E testing, Playwright |
+| `tdd-workflow` | Test-driven development |
+| `code-review-checklist` | Code review standards |
+| `lint-and-validate` | Linting, validation |
+| `typescript-expert` | TypeScript patterns |
 
-### DevOps & Tools
+### DevOps & Infrastructure
 
 | Skill | Description |
 |-------|-------------|
-| `devops-expert` | CI/CD, infrastructure |
+| `deployment-procedures` | CI/CD, deploy workflows |
 | `docker-expert` | Containerization, Compose |
-| `github-actions-expert` | GitHub Actions workflows |
-| `git-expert` | Git workflows, conflicts |
+| `server-management` | Infrastructure management |
+| `bash-linux` | Linux commands, shell scripts |
+| `powershell-windows` | Windows PowerShell |
 
-### Code Quality
+### Security
 
 | Skill | Description |
 |-------|-------------|
-| `code-review` | Comprehensive code review |
-| `refactoring-expert` | Code smell detection, refactoring |
-| `typescript-expert` | TypeScript patterns, type system |
-| `accessibility-expert` | WCAG compliance, a11y |
+| `vulnerability-scanner` | Security auditing |
+| `red-team-tactics` | Offensive security |
+
+### Architecture & Planning
+
+| Skill | Description |
+|-------|-------------|
+| `app-builder` | Full-stack app scaffolding |
+| `architecture` | System design patterns |
+| `plan-writing` | Task planning, breakdown |
+| `brainstorming` | Socratic questioning |
+
+### Specialized
+
+| Skill | Description |
+|-------|-------------|
+| `mobile-design` | Mobile UI/UX patterns |
+| `game-development` | Game logic, mechanics |
+| `performance-profiling` | Web Vitals, optimization |
+| `seo-fundamentals` | SEO, visibility |
+| `i18n-localization` | Internationalization |
+| `geo-fundamentals` | GenAI optimization |
+| `mcp-builder` | Model Context Protocol |
+| `parallel-agents` | Multi-agent patterns |
+| `behavioral-modes` | Agent personas |
+| `systematic-debugging` | Troubleshooting |
+| `documentation-templates` | Doc formats |
+| `clean-code` | Coding standards |
 
 ---
 
-## 📏 Rules
+## 🤖 Agents (16)
 
-Rules are guidelines that direct agent behavior. There are 3 activation types:
+Specialized AI agents for different domains:
 
-- **always_on** - Always applied
-- **model_decision** - Agent decides when to apply
-- **glob** - Applied based on file pattern
-
-### Rules List
-
-| # | File | Activation | Description |
-|---|------|------------|-------------|
-| 1 | `01-identity.md` | Always On | Role & working principles |
-| 2 | `02-task-classification.md` | Always On | 4 task types classification |
-| 3 | `03-mode-consulting.md` | Model Decision | Consulting process |
-| 4 | `04-mode-build.md` | Model Decision | Build process |
-| 5 | `05-mode-debug.md` | Model Decision | Debug process |
-| 6 | `06-mode-optimize.md` | Model Decision | Optimization process |
-| 7 | `07-technical-standards.md` | Always On | Coding standards |
-| 8 | `08-communication.md` | Always On | Communication style |
-| 9 | `09-checklist.md` | Always On | Pre-delivery checklist |
-| 10 | `10-special-situations.md` | Always On | Special situation handling |
+| Agent | Focus |
+|-------|-------|
+| `orchestrator` | Multi-agent coordination |
+| `project-planner` | Discovery, task planning |
+| `frontend-specialist` | Web UI/UX |
+| `backend-specialist` | API, business logic |
+| `database-architect` | Schema, SQL |
+| `mobile-developer` | iOS, Android |
+| `game-developer` | Game logic |
+| `devops-engineer` | CI/CD, Docker |
+| `security-auditor` | Security compliance |
+| `penetration-tester` | Offensive security |
+| `test-engineer` | Testing strategies |
+| `debugger` | Root cause analysis |
+| `performance-optimizer` | Speed, Vitals |
+| `seo-specialist` | Ranking, visibility |
+| `documentation-writer` | Manuals, docs |
+| `explorer-agent` | Codebase analysis |
 
 ---
 
-## 🔄 Workflows
+## 🔄 Workflows (11)
 
-Workflows are step-by-step procedures. Invoke with slash command `/workflow-name`.
+Workflows are step-by-step procedures. Invoke with slash command.
 
-| Workflow | Command | Description |
-|----------|---------|-------------|
-| Request Handler | `/request` | Full-stack engineer task handling |
-| UI/UX Pro Max | `/ui-ux-pro-max` | Design UI with 50 styles, 21 palettes |
+| Command | Description |
+|---------|-------------|
+| `/brainstorm` | Socratic discovery |
+| `/create` | Create new features |
+| `/debug` | Debug issues |
+| `/deploy` | Deploy application |
+| `/enhance` | Improve existing code |
+| `/orchestrate` | Multi-agent coordination |
+| `/plan` | Task breakdown |
+| `/preview` | Preview changes |
+| `/status` | Check project status |
+| `/test` | Run tests |
+| `/ui-ux-pro-max` | Design with 50 styles |
 
 ---
 
