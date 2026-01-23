@@ -1,110 +1,102 @@
 ---
 name: agent-design
-description: Principles for designing expert AI agents. Covers persona engineering, semantic triggers, boundary enforcement, and skill integration within the Antigravity framework.
+description: Advanced principles for designing expert AI agents. Covers persona engineering, semantic trigger optimization, boundary theory, and cognitive architecture.
 allowed-tools: Read, Write, Edit, Glob, Grep
 ---
 
-# Agent Design Principles
+# Advanced Agent Design
 
-> **"An agent is not a prompt. It is a specialized engineer with a domain, a toolkit, and strict boundaries."**
+> **"The difference between a chatbot and an agent is SPECIFICITY."**
 
-## 1. The Anatomy of an Agent
+## 1. The Trinity of Agent Architecture
 
-A valid Antigravity agent consists of 3 core layers:
+To create an agent that feels like a senior engineer, you must design three pillars:
 
-1.  **Identity Layer (Who)**: The persona, philosophy, and expertise.
-2.  **Operational Layer (How)**: The tools, skills, and decision frameworks.
-3.  **Boundary Layer (What NOT)**: Strict prohibitions to prevent hallucination and overlap.
+### I. The Voice of Authority (Persona)
+It is not enough to say "act like an expert." You must give it a **worldview**.
+- *Generic:* "Write clean code."
+- *Specific:* "Treat duplicated code as unacceptable technical debt. Prefer readability over brevity."
 
-### 1.1 The Frontmatter (The semantic router)
+### II. The Exclusion Mandate (Boundaries)
+What the agent does **NOT** do is more important than what it does.
+- If you don't tell the `backend-specialist` to ignore CSS, it will try to "help" and break the layout.
+- **Rule:** Define explicit "Anti-Triggers" in the system prompt.
 
-The frontmatter is the **most critical** part. It determines when the agent activates.
-
-```yaml
----
-name: backend-specialist
-description: Backend Architect for API/DB tasks. Triggers on: api, database, sql, schema, server.
-skills: clean-code, api-patterns, database-design
-tools: Read, Write, Edit, Bash
----
-```
-
-> 🔴 **Rule:** The `description` must include specific keywords to catch the router's semantic match.
+### III. The External Library (Skills)
+Agents have short memories. Deep knowledge (docs, manuals, rules) must live in `SKILL.md` files loaded on demand.
+- **Do not put:** The entire Pandas manual in the prompt.
+- **Put:** Instructions on how to *use* the `data-analysis` skill.
 
 ---
 
-## 2. Agent Templates
+## 2. Semantic Trigger Engineering (Router Optimization)
 
-### The "Specialist" Template
-Use this for domain-specific experts (e.g., `frontend-specialist`, `mobile-developer`).
+The Antigravity system uses semantic matching to choose which agent to invoke.
 
+### How to Hack the Router:
+1.  **Keyword Density:** Use technical synonyms.
+    - *Ex for Database:* `sql`, `schema`, `migration`, `postgres`, `orm`, `prisma`.
+2.  **Action Verbs:**
+    - *Ex for Tester:* `test`, `validate`, `verify`, `audit`, `coverage`.
+3.  **Avoid Overlap:**
+    - If `frontend` and `backend` both have the word "javascript", the router might get confused. Keep "browser" in front and "node" in back.
+
+---
+
+## 3. High-Fidelity Agent Templates
+
+### The "Domain Specialist"
 ```markdown
 # [Role Name]
 
-## Your Philosophy
-[One sentence defining the agent's core belief]
-e.g., "Frontend is not just UI—it's system design."
+## Philosophy
+[Strong, opinionated core belief]
 
-## Capabilities
-| Can Do | Cannot Do |
-|--------|-----------|
-| [Core Task] | [Adjacent domain task] |
+## Your Standards
+- [Gold Standard 1]
+- [Gold Standard 2]
 
-## Design Process
-1. Analysis
-2. Decision
-3. Execution
+## What You Ignore (Boundaries)
+- [Adjacent Domain A]
+- [Low-Level Tasks]
 
-## Anti-Patterns
-❌ [Bad Practice 1]
-❌ [Bad Practice 2]
+## Self-Verification Checklist
+Before answering, ask yourself:
+1. Does this follow Standard X?
+2. Does this violate Boundary Y?
 ```
 
-### The "Orchestrator" Template
-Use this for coordinators (e.g., `project-planner`).
-
+### The "Critic / Auditor"
 ```markdown
-# [Coordinator Name]
+# [Auditor Name]
 
 ## Your Role
-You do not write code. You coordinate resources.
+You are not here to please. You are here to find flaws.
 
-## Workflow
-1. Analyze Request
-2. Select Agents
-3. Synthesize Results
+## Audit Protocol
+1. Initial Scan
+2. Risk Identification
+3. Proof of Concept (Exploit)
+4. Mitigation Report
 ```
 
 ---
 
-## 3. Boundary Enforcement
+## 4. Design Anti-Patterns (What to Avoid)
 
-Every agent must explicitly state what it **CANNOT** do.
-
-| Agent Type | Prohibited Actions |
-|------------|--------------------|
-| **Frontend** | ❌ Writing API endpoints, Database schemas |
-| **Backend** | ❌ CSS styling, React components |
-| **Planner** | ❌ Writing implementation code |
-
-> 🔴 **Design Rule:** If an agent can do "everything", it is not an agent—it is a generic LLM. **Specialization requires limitation.**
+| Error | Symptom | Solution |
+|-------|---------|----------|
+| **"Do-It-All" Prompt** | Agent tries to fix CSS and Deploy at the same time | Create 2 separate agents |
+| **"Friendly" Persona** | Agent apologizes too much and is verbose | Give instruction "Be concise and direct" |
+| **Loose Instruction** | Agent invents libraries that don't exist | Link to a Skill with allowed libs |
+| **Missing Tools** | Agent suggests code but doesn't edit file | Add `Edit` and `Write` to tools list |
 
 ---
 
-## 4. Skill Integration
+## 5. Turing Test for Agents
 
-Agents should not contain deep technical manuals. They should **reference** Skills.
+Before releasing your agent, run the test:
 
-- **Bad:** Writing 50 lines about React optimization in the agent file.
-- **Good:** "Apply performance patterns from `react-patterns` skill."
-
----
-
-## 5. Verification Checklist (The Turing Test for Agents)
-
-Before releasing a new agent, ask:
-
-1.  **Is the trigger clear?** (Can I predict when it activates?)
-2.  **Are boundaries rigid?** (Does it know when to STOP?)
-3.  **Is the persona distinct?** (Does it sound like an expert, not a chatbot?)
-4.  **Are skills linked?** (Does it leverage the existing knowledge base?)
+1.  **Denial Test:** Ask for something out of its scope. Does it politely refuse? (If it tries to do it, it failed).
+2.  **Opinion Test:** Ask for a technical recommendation. Does it defend a viewpoint or give a vague answer? (Must have an opinion).
+3.  **Tool Test:** Ask to create a file. Does it use the tool or return a text code block? (Must use the tool).
